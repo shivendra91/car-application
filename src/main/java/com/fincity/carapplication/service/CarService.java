@@ -1,5 +1,6 @@
 package com.fincity.carapplication.service;
 
+import com.fincity.carapplication.entity.CarEntity;
 import com.fincity.carapplication.model.Car;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -12,5 +13,7 @@ public interface CarService {
 
     public void updateCar(Car car) throws Exception;
 
-    public void deleteCar(Integer id);
+    public void deleteCar(Integer id) throws Exception;
+
+    public List<CarEntity> findCar(String name, String model, String manufactureName, Integer manufacturingYear, String color);
 }

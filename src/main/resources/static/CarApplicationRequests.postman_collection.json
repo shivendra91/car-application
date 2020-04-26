@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "7bafdbbb-ab08-41e4-afb7-edd8860516bf",
+		"name": "CarApplicationRequests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8888/api/car/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGl2ZW5kcmFAZ21haWwuY29tIiwiZXhwIjoxNTg3OTM5MzcxLCJpYXQiOjE1ODc5MjEzNzF9.cgQmNdrsTRo_lUhiwyoKfJV9yYtAAydwYh6cujMNNDrXMtZ7KBZYi48SEuZxGolDDxwpBqOAYylT5Rcq84h_wg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : 8,\n\t\"name\":\"Polo\",\n\t\"manufactureName\":\"Volkswagen\",\n\t\"model\":\"2018\",\n\t\"manufacturingYear\":\"2019\",\n\t\"color\":\"Blue\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/car/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"car",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8888/api/car/save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGl2ZW5kcmFAZ21haWwuY29tIiwiZXhwIjoxNTg3OTM5MzcxLCJpYXQiOjE1ODc5MjEzNzF9.cgQmNdrsTRo_lUhiwyoKfJV9yYtAAydwYh6cujMNNDrXMtZ7KBZYi48SEuZxGolDDxwpBqOAYylT5Rcq84h_wg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"name\":\"Polo\",\n\t\"manufactureName\":\"Volkswagen\",\n\t\"model\":\"2018\",\n\t\"manufacturingYear\":\"2019\",\n\t\"color\":\"Blue\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/car/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"car",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8888/api/car/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGl2ZW5kcmFAZ21haWwuY29tIiwiZXhwIjoxNTg3OTM5MzcxLCJpYXQiOjE1ODc5MjEzNzF9.cgQmNdrsTRo_lUhiwyoKfJV9yYtAAydwYh6cujMNNDrXMtZ7KBZYi48SEuZxGolDDxwpBqOAYylT5Rcq84h_wg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"name\":\"Polo\",\n\t\"manufactureName\":\"Volkswagen\",\n\t\"model\":\"2018\",\n\t\"manufacturingYear\":\"2019\",\n\t\"color\":\"Blue\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/car/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"car",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8888/api/car/1",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGl2ZW5kcmFAZ21haWwuY29tIiwiZXhwIjoxNTg3OTM5MzcxLCJpYXQiOjE1ODc5MjEzNzF9.cgQmNdrsTRo_lUhiwyoKfJV9yYtAAydwYh6cujMNNDrXMtZ7KBZYi48SEuZxGolDDxwpBqOAYylT5Rcq84h_wg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"name\":\"Polo\",\n\t\"manufactureName\":\"Volkswagen\",\n\t\"model\":\"2018\",\n\t\"manufacturingYear\":\"2019\",\n\t\"color\":\"Blue\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/car/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"car",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8888/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"shivendra@gmail.com\",\n\t\"password\":\"shivendra\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8888/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"shivendra@gmail.com\",\n\t\"password\":\"shivendra\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

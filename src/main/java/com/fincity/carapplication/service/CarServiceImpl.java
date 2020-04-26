@@ -1,6 +1,7 @@
 package com.fincity.carapplication.service;
 
 import com.fincity.carapplication.entity.CarEntity;
+import com.fincity.carapplication.exception.CarException;
 import com.fincity.carapplication.model.Car;
 import com.fincity.carapplication.repository.CarRepository;
 import org.modelmapper.ModelMapper;
@@ -39,13 +40,22 @@ public class CarServiceImpl implements CarService {
     public void updateCar(Car car) throws Exception {
         Optional<CarEntity> carEntity = carRepository.findById(car.getId());
         if (!carEntity.isPresent())
-            throw new Exception("Car not found");
+            throw new CarException("Car not found");
         CarEntity carUpdate = modelMapper.map(car, CarEntity.class);
         carRepository.save(carUpdate);
     }
 
     @Override
-    public void deleteCar(Integer id) {
+    public void deleteCar(Integer id) throws Exception {
+        Optional<CarEntity> carEntity = carRepository.findById(id);
+        if (!carEntity.isPresent())
+            throw new CarException("Car not found");
+        carRepository.deleteById(id);
+    }
 
+    @Override
+    public List<CarEntity> findCar(String name, String model, String manufactureName, Integer manufacturingYear, String color) {
+        List<CarEntity> carList = carRepository.findByNameAndManufactureNameAndModelAndManufacturingYearAndColor(name, manufactureName, model, manufacturingYear, color);
+        return carList;
     }
 }
