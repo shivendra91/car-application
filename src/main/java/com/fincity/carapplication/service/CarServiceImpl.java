@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -28,13 +29,19 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public void saveCar(Car car) {
-
+    public Integer saveCar(Car car) {
+        CarEntity carEntity = modelMapper.map(car, CarEntity.class);
+        Integer id = carRepository.save(carEntity).getId();
+        return id;
     }
 
     @Override
-    public void updateCar(Car car) {
-
+    public void updateCar(Car car) throws Exception {
+        Optional<CarEntity> carEntity = carRepository.findById(car.getId());
+        if (!carEntity.isPresent())
+            throw new Exception("Car not found");
+        CarEntity carUpdate = modelMapper.map(car, CarEntity.class);
+        carRepository.save(carUpdate);
     }
 
     @Override

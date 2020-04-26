@@ -8,9 +8,9 @@ import java.util.List;
 public interface CarService {
     public List<Car> getAllCars();
 
-    public void saveCar(Car car);
+    public Integer saveCar(Car car);
 
-    public void updateCar(Car car);
+    public void updateCar(Car car) throws Exception;
 
     public void deleteCar(Integer id);
 }

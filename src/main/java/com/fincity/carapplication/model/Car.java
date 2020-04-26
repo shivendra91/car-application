@@ -1,6 +1,5 @@
 package com.fincity.carapplication.model;
 
-
 public class Car {
     private Integer id;
     private String name;
@@ -8,6 +7,9 @@ public class Car {
     private String model;
     private Integer manufacturingYear;
     private String color;
+
+    public Car() {
+    }
 
     public Integer getId() {
         return id;
