@@ -55,9 +55,32 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> findCar(String name, String model, String manufactureName, Integer manufacturingYear, String color) {
-        List<CarEntity> carEntities = carRepository.findByNameAndManufactureNameAndModelAndManufacturingYearAndColor(name, manufactureName, model, manufacturingYear, color);
         List<Car> carList = new ArrayList();
-        carEntities.forEach(carEntity -> carList.add(modelMapper.map(carEntity, Car.class)));
+        if (name != null) {
+            List<CarEntity> carEntities = carRepository.findByName(name);
+            carEntities.forEach(carEntity -> carList.add(modelMapper.map(carEntity, Car.class)));
+            return carList;
+        }
+        if (model != null) {
+            List<CarEntity> carEntities = carRepository.findByModel(model);
+            carEntities.forEach(carEntity -> carList.add(modelMapper.map(carEntity, Car.class)));
+            return carList;
+        }
+        if (manufactureName != null) {
+            List<CarEntity> carEntities = carRepository.findByManufactureName(manufactureName);
+            carEntities.forEach(carEntity -> carList.add(modelMapper.map(carEntity, Car.class)));
+            return carList;
+        }
+        if (manufacturingYear != null) {
+            List<CarEntity> carEntities = carRepository.findByManufacturingYear(manufacturingYear);
+            carEntities.forEach(carEntity -> carList.add(modelMapper.map(carEntity, Car.class)));
+            return carList;
+        }
+        if (color != null) {
+            List<CarEntity> carEntities = carRepository.findByColor(color);
+            carEntities.forEach(carEntity -> carList.add(modelMapper.map(carEntity, Car.class)));
+            return carList;
+        }
         return carList;
     }
 }

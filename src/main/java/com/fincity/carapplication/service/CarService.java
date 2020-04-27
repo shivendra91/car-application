@@ -1,8 +1,6 @@
 package com.fincity.carapplication.service;
 
-import com.fincity.carapplication.entity.CarEntity;
 import com.fincity.carapplication.model.Car;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 

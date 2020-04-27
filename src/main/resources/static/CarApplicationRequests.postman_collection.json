@@ -137,7 +137,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8888/api/car/1",
+					"raw": "http://localhost:8888/api/car/6",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -203,6 +203,38 @@
 					"port": "8888",
 					"path": [
 						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8888/api/car/find?manufactureName=Hyundai",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGl2ZW5kcmFAZ21haWwuY29tIiwiZXhwIjoxNTg3OTkwMjEwLCJpYXQiOjE1ODc5NzIyMTB9.cwesnzy7Cnz8mpjUCiO_FkJPUtsyn1Uc8ThUtx2C3J_TrCOmfBM07LUFUxy9oDS46u9EgN8vQAhbedE1DFYRLg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8888/api/car/find?manufactureName=Hyundai",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"car",
+						"find"
+					],
+					"query": [
+						{
+							"key": "manufactureName",
+							"value": "Hyundai"
+						}
 					]
 				}
 			},

@@ -10,4 +10,13 @@ public interface CarRepository extends JpaRepository<CarEntity, Integer> {
     List<CarEntity> findByNameAndManufactureNameAndModelAndManufacturingYearAndColor(String name, String manufactureName,
                                                                                      String model, Integer manufacturingYear, String color);
 
+    List<CarEntity> findByName(String name);
+
+    List<CarEntity> findByModel(String name);
+
+    List<CarEntity> findByManufactureName(String name);
+
+    List<CarEntity> findByManufacturingYear(Integer manufacturingYear);
+
+    List<CarEntity> findByColor(String color);
 }
