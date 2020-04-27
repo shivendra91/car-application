@@ -59,7 +59,7 @@ public class CarController {
     }
 
     @GetMapping("/find")
-    public ResponseEntity<List<CarEntity>> findCars(@RequestParam(value = "name", required = false) String name,
+    public ResponseEntity<List<Car>> findCars(@RequestParam(value = "name", required = false) String name,
                                                     @RequestParam(value = "model", required = false) String model,
                                                     @RequestParam(value = "manufactureName", required = false) String manufactureName,
                                                     @RequestParam(value = "color", required = false) String color,

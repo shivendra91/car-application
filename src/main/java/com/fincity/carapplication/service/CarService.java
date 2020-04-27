@@ -15,5 +15,5 @@ public interface CarService {
 
     public void deleteCar(Integer id) throws Exception;
 
-    public List<CarEntity> findCar(String name, String model, String manufactureName, Integer manufacturingYear, String color);
+    public List<Car> findCar(String name, String model, String manufactureName, Integer manufacturingYear, String color);
 }

@@ -54,8 +54,10 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<CarEntity> findCar(String name, String model, String manufactureName, Integer manufacturingYear, String color) {
-        List<CarEntity> carList = carRepository.findByNameAndManufactureNameAndModelAndManufacturingYearAndColor(name, manufactureName, model, manufacturingYear, color);
+    public List<Car> findCar(String name, String model, String manufactureName, Integer manufacturingYear, String color) {
+        List<CarEntity> carEntities = carRepository.findByNameAndManufactureNameAndModelAndManufacturingYearAndColor(name, manufactureName, model, manufacturingYear, color);
+        List<Car> carList = new ArrayList();
+        carEntities.forEach(carEntity -> carList.add(modelMapper.map(carEntity, Car.class)));
         return carList;
     }
 }
