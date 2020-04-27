@@ -22,11 +22,6 @@ public class CarController {
     @Autowired
     private CarService carService;
 
-    @GetMapping("/test")
-    public String testMethod() {
-        return "Hello World!";
-    }
-
     @GetMapping("/all")
     public ResponseEntity<List<Car>> getAllCars() {
         return ResponseEntity.ok(carService.getAllCars());
