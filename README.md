@@ -7,3 +7,9 @@ http://localhost/autenticate -> Once user is registered,he can fetch JWT token u
 
 The current token, as per my code, is valid for 5hrs which can be modified as required.
 Now, once user has the token he can make api calls to the system by passing the token in request header.
+
+Database : MySQL
+database name : car_application
+There are 2 tables in car_application
+user : for storing user login info details
+car : for storing car information
